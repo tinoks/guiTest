@@ -1,16 +1,17 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="style.css">
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     </head>
     <body>
         <sidebar>
             <input type="radio" id="layers" name="tab-group-1">
             <label for="layers"><i class="material-icons">layers</i></label>
-
+            
             <input type="radio" id="search" name="tab-group-1">
             <label for="search"><i class="material-icons">search</i></label>
 
@@ -20,16 +21,33 @@
             <spacer></spacer>
 
             <input type="radio" id="help" name="tab-group-1">
-            <label for="help"><i class="material-icons">help</i></label>            
+            <label for="help"><i class="bottom material-icons">help</i></label>            
 
             <input type="radio" id="settings" name="tab-group-1">
-            <label for="settings"><i class="material-icons">settings</i></label>
+            <label for="settings"><i class="material-icons bottom">settings</i></label>
         </sidebar>
         <main>
-            <leftmenu></leftmenu>
+            <leftmenu>
+                <layers>
+                    <header>LAYERS</header>
+                    <accordion> Local </accordion>
+                </layers>
+                <search>
+                    <header>search</header>
+                </search>
+                <multiline_chart>
+                    <header>Analysis</header>
+                </multiline_chart>
+                <help>
+                    <header>help</header>
+                </help>
+                <settings>
+                    <header>settings</header>
+                </settings>
+            </leftmenu>
             <map id="map"></map>
         </main>
-        
+        <footer></footer>
         <script src="index.js"></script>
     </body>
 </html>
